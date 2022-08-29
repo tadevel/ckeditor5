@@ -24,7 +24,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+// import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import PictureEditing from '@ckeditor/ckeditor5-image/src/pictureediting';
@@ -56,7 +56,7 @@ ClassicEditor.builtinPlugins = [
 	Indent,
 	Link,
 	List,
-	MediaEmbed,
+	// MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
 	PictureEditing,
@@ -106,5 +106,24 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'es'
 };
+
+export { default as Plugin } from '@ckeditor/ckeditor5-core/src/plugin';
+export { default as Widget } from '@ckeditor/ckeditor5-widget/src/widget';
+export { toWidget, toWidgetEditable } from '@ckeditor/ckeditor5-widget/src/utils';
+export { default as ClickObserver } from '@ckeditor/ckeditor5-engine/src/view/observer/clickobserver';
+export { ButtonView } from '@ckeditor/ckeditor5-ui'
+export { Clipboard, ClipboardPipeline, DragDrop, PastePlainText } from '@ckeditor/ckeditor5-clipboard';
+export { DomEventObserver } from '@ckeditor/ckeditor5-engine';
+export { default as plainTextToHtml } from '@ckeditor/ckeditor5-clipboard/src/utils/plaintexttohtml';
+export { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
+import { Underline } from '@ckeditor/ckeditor5-basic-styles';
+ClassicEditor.builtinPlugins.push(Underline);
+export { FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
+import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+ClassicEditor.builtinPlugins.push(GeneralHtmlSupport);
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+ClassicEditor.builtinPlugins.push(SourceEditing);
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
+ClassicEditor.builtinPlugins.push(Alignment);
