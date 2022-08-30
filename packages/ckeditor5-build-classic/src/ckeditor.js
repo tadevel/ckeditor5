@@ -118,6 +118,7 @@ export { Clipboard, ClipboardPipeline, DragDrop, PastePlainText } from '@ckedito
 export { DomEventObserver } from '@ckeditor/ckeditor5-engine';
 export { default as plainTextToHtml } from '@ckeditor/ckeditor5-clipboard/src/utils/plaintexttohtml';
 export { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
+export { Highlight } from '@ckeditor/ckeditor5-highlight';
 import { Underline } from '@ckeditor/ckeditor5-basic-styles';
 ClassicEditor.builtinPlugins.push(Underline);
 export { FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
