@@ -24,7 +24,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-// import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import PictureEditing from '@ckeditor/ckeditor5-image/src/pictureediting';
@@ -43,22 +43,22 @@ ClassicEditor.builtinPlugins = [
 	Bold,
 	Italic,
 	BlockQuote,
-	CKBox,
-	CKFinder,
-	CloudServices,
-	EasyImage,
+	// CKBox,
+	// CKFinder,
+	// CloudServices,
+	// EasyImage,
 	Heading,
-	Image,
-	ImageCaption,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
+	// Image,
+	// ImageCaption,
+	// ImageStyle,
+	// ImageToolbar,
+	// ImageUpload,
 	Indent,
 	Link,
 	List,
 	// MediaEmbed,
 	Paragraph,
-	PasteFromOffice,
+	// PasteFromOffice,
 	PictureEditing,
 	Table,
 	TableToolbar,
@@ -119,12 +119,8 @@ export { DomEventObserver } from '@ckeditor/ckeditor5-engine';
 export { default as plainTextToHtml } from '@ckeditor/ckeditor5-clipboard/src/utils/plaintexttohtml';
 export { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
 export { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { Underline } from '@ckeditor/ckeditor5-basic-styles';
-ClassicEditor.builtinPlugins.push(Underline);
+export { Underline } from '@ckeditor/ckeditor5-basic-styles';
 export { FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-ClassicEditor.builtinPlugins.push(GeneralHtmlSupport);
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-ClassicEditor.builtinPlugins.push(SourceEditing);
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-ClassicEditor.builtinPlugins.push(Alignment);
+export { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+export { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+export { Alignment } from '@ckeditor/ckeditor5-alignment';

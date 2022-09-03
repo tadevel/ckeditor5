@@ -176,6 +176,12 @@ function scrollAncestorsToShowRect( parent: HTMLElement, getRect: () => Rect ): 
 	let parentRect: Rect, targetRect: Rect;
 
 	while ( parent != parentWindow.document.body ) {
+		if (!parent) break;
+		// @ts-ignore
+		if (parent.host) {
+			// @ts-ignore
+			parent = parent.host;
+		}
 		targetRect = getRect();
 		parentRect = new Rect( parent ).excludeScrollbarsAndBorders();
 
